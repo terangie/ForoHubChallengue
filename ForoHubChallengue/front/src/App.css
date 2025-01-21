@@ -1,0 +1,620 @@
+.App {
+  color: black;
+  font-family: "Reddit Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+  background-color: rgb(255, 255, 255, .8);
+  backdrop-filter: blur(9px);
+  align-items: center;
+  position: fixed;
+  margin-bottom: 50px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar div {
+  margin-left: 50px;
+}
+
+.navbar-usuario {
+  display: flex;
+}
+
+.navbar-div {
+  display: flex;
+}
+
+.f-account {
+  display: none;
+}
+
+ .f-account.activex {
+  display: flex;
+  left: 0;
+  top: 0;
+  margin-top: 50px;
+  margin-left: -50px;
+  height: 100vh;
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 3px 3px 9px rgb(211, 211, 211);
+  animation: slideRight;
+  animation-duration: .9s;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(9px);
+  padding-right: 30px;
+}
+
+.login {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.register {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.login-data input {
+  margin-left: -50px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid rgb(128, 128, 128, .5);
+  outline: none;
+  width: 100%;
+}
+
+.login-submit {
+  margin-top: 20px;
+  background-color: skyblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+  border: none;
+  color: white;
+  align-items: center;
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  width: 70px;
+  height: 30px;
+}
+
+
+.topicos {
+  display: flex;
+  justify-content: center;
+}
+
+.tc {
+  margin-top: 50px;
+  width: 80%;
+}
+
+.crear-topico-container {
+  margin-top: 20px;
+  float: right;
+  display: flex;
+}
+
+.crear-topico {
+  display: flex;
+  background-color: skyblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+  border: none;
+  color: white;
+  align-items: center;
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  float: right;
+}
+
+.crear-topico p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.f-topico {
+  display: none;
+}
+
+ .f-topico.active {
+  display: flex;
+  width: 70%;
+  height: 70%;
+  bottom: 0;
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 3px 3px 9px rgb(211, 211, 211);
+  animation: slideUp;
+  animation-duration: .9s;
+  background-color: rgb(255, 255, 255, .9);
+  backdrop-filter: blur(9px);
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-bottom: 40px;
+}
+
+.f-topico-m {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.f-topico-i {
+  width: 80%;
+}
+
+.f-topico-i  {
+  display: block;
+}
+
+.f-topico-i textarea {
+  display: block;
+  resize: none;
+  border: none;
+  font-size: 18px;
+}
+
+.f-topico-titulo {
+  margin-top: 30px;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: center;
+  outline: none;
+  font-family: "Reddit Sans", sans-serif;
+}
+
+.f-topico-curso {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 3px;
+}
+
+#select-curso {
+  margin-left: 5px;
+}
+
+.f-topico-mensaje {
+  margin-top: 30px;
+  margin-left: 3px;
+  width: 100%;
+  height: 300px;
+  border: none;
+  font-size: 20px;
+  justify-content: center;
+  outline: none;
+  font-family: "Reddit Sans", sans-serif;
+}
+
+.f-topico-submit {
+  margin-top: 30px;
+  background-color: skyblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+  border: none;
+  color: white;
+  align-items: center;
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  width: 70px;
+  height: 30px;
+}
+
+.topicos-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.topico-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.topico {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+  text-decoration: none;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: gray;
+}
+
+.topico-l {
+  width: 65%;
+}
+
+.topico-l div {
+  margin-bottom: 10px;
+}
+
+.title-zone {
+  display: flex;
+  align-items: baseline;
+}
+
+.topico-titulo {
+  font-size: 22px;
+  color: skyblue;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.topico-categoria {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    align-items: center;
+    margin-inline: 5px;
+    font-size: 10px;
+    padding: 2px 2px;
+}
+
+.topico-mensaje {
+  font-size: 18px;
+  color: rgb(35, 35, 35);
+  margin-top: -15px;
+}
+
+.topico-fecha {
+  font-size: 12px;
+  color: grey;
+}
+
+.topico-r {
+  display: flex;
+  width: 35%;
+  align-items: center;
+  text-align: end;
+}
+
+.topico-r div {
+  margin-inline: 10px;
+}
+
+.topico-respuestas {
+  display: block;
+  text-align: center;
+}
+
+.topico-div-autor {
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.topico-autor {
+  color: rgb(35, 35, 35);
+  font-size: 18px;
+}
+
+.topico-detail-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tdc {
+  margin-top: 50px;
+  width: 80%;
+}
+
+.topico-detail {
+  margin-top: 50px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+}
+
+.detail-container {
+  width: 100%;
+  border-bottom: 1px solid rgb(128, 128, 128, .5);
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.detail-titulo {
+  margin-left: 20px;
+  font-size: 25px;
+  color: skyblue;
+  font-weight: 600;
+  align-items: center;
+}
+
+.detail-categoria {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  align-items: center;
+  margin-inline: 5px;
+  font-size: 10px;
+  padding: 2px 2px;
+  color: gray;
+}
+
+.detail-fecha {
+  margin-left: 20px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: grey;
+}
+
+.detail-div-autor {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.detail-div-autor p {
+  margin-left: 5px;
+}
+
+.detail-autor {
+  margin-left: 5px;
+  color: gray;
+  font-size: 20px;
+}
+
+.detail-mensaje {
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgb(35, 35, 35);
+}
+
+.detail-delete {
+  text-align: end;
+}
+
+.detail-delete img {
+  cursor: pointer;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.detail-delete-no {
+  display: none;
+}
+
+.detail-respuestas-container {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.res-title {
+  margin-top: 10px;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.respuesta {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 10% 70% 10% 10%;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+
+.res-one {
+  grid-column: 1 / 2 ;
+  grid-row: 1 / 3;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.res-two {
+  grid-column: 2 / 3 ;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+}
+
+.res-two p {
+  margin-left: 5px;
+}
+
+.res-three {
+  grid-column: 2 / 3 ;
+  grid-row: 2 / 3;
+  align-items: center;
+  font-size: 20px;
+  color: rgb(35, 35, 35);
+  margin-left: 5px;
+}
+
+.res-four {
+  grid-column: 3 / 4 ;
+  grid-row: 1 / 3;
+  align-items: center;
+  font-size: 12px;
+  color: grey;
+}
+
+.res-five {
+  grid-column: 4 / 5 ;
+  grid-row: 1 / 3;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.res-autor {
+  margin-left: 5px;
+  color: gray;
+  font-size: 20px;
+}
+
+.crear-res-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.crear-respuesta {
+  display: flex;
+  background-color: skyblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+  border: none;
+  color: white;
+  align-items: center;
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.crear-respuesta p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.f-respuesta {
+  display: none;
+}
+
+ .f-respuesta.active {
+  display: flex;
+  width: 70%;
+  height: 70%;
+  bottom: 0;
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 3px 3px 9px rgb(211, 211, 211);
+  animation: slideUp;
+  animation-duration: .9s;
+  background-color: rgb(255, 255, 255, .9);
+  backdrop-filter: blur(9px);
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-bottom: 40px;
+  
+}
+
+.f-res-m {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.f-res-i {
+  width: 80%;
+}
+
+.f-res-i  {
+  display: block;
+}
+
+.f-res-i textarea {
+  display: block;
+  resize: none;
+  border: none;
+  font-size: 18px;
+}
+
+.f-res-mensaje {
+  margin-top: 30px;
+  width: 100%;
+  height: 300px;
+  border: none;
+  font-size: 20px;
+  justify-content: center;
+  outline: none;
+  font-family: "Reddit Sans", sans-serif;
+}
+
+.f-res-submit {
+  margin-top: 30px;
+  background-color: skyblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgb(211, 211, 211, .8);
+  border: none;
+  color: white;
+  align-items: center;
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  width: 70px;
+  height: 30px;
+}
+
+.button-container {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.button-container-t {
+  background-color: transparent;
+  border: none;
+  padding: 0px 0px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .topico-l {
+    width: 50%;
+  }
+
+  .topico-r {
+    width: 50%;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  } 
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  } 
+  to {
+    transform: translateX(0);
+  }
+}
